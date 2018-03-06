@@ -34,17 +34,17 @@ namespace complexPowers
             Console.WriteLine("{0:N}+j{1:N}", c13.r, c13.j);
 
             // Create a complex number by calling its class constructor.
-            Complex c1 = new Complex(12, 6); Console.WriteLine(c1);
+            Complex c1 = new Complex(12, 6); Console.WriteLine("{0:N}+j{0:N}",c1);
             // Assign a Double to a complex number.
-            Complex c2 = 3.14; Console.WriteLine(c2);
+            Complex c2 = 3.14; Console.WriteLine("c2="+c2);
             // Cast a Decimal to a complex number.
             Complex c3 = (Complex)12.3m; Console.WriteLine(c3);
             // Assign the return value of a method to a Complex variable.
-            Complex c4 = Complex.Pow(Complex.One, -1); Console.WriteLine(c4);
+            Complex c4 = Complex.Pow(Complex.ImaginaryOne, 3); Console.WriteLine("c4=" +c4);
             // Assign the value returned by an operator to a Complex variable.
-            Complex c5 = Complex.One + Complex.One; Console.WriteLine(c5);
+            Complex c5 = Complex.One - Complex.ImaginaryOne; Console.WriteLine(c5);
             // Instantiate a complex number from its polar coordinates.
-            Complex c6 = Complex.FromPolarCoordinates(10, .524); Console.WriteLine(c6);
+            Complex c6 = Complex.FromPolarCoordinates(1, Math.PI/4); Console.WriteLine(c6);
             Console.ReadLine();
         }
     }
